@@ -1,8 +1,10 @@
 # TP7 — Cache Hibernate, N+1 et optimisation JPA
 
 Ce projet Java 8+ utilise JPA 2.2, Hibernate 5.4, Ehcache 3 (via JCache) et H2 en mémoire. Il crée 10 auteurs et 50 livres puis mesure les requêtes SQL pour quatre scénarios. La base est recréée à chaque exécution.
+<img width="1461" height="576" alt="image" src="https://github.com/user-attachments/assets/b3e70766-599f-41b9-be93-5f7947b321f8" />
 
 ## Lancer
+<img width="1000" height="572" alt="image" src="https://github.com/user-attachments/assets/effe9f77-e0eb-40c4-8c73-de2250ebdf2e" />
 
 Dans ce dossier, exécuter `mvn clean test` puis `mvn exec:java` (ou lancer `com.example.App` depuis l'IDE). Il faut un JDK et Maven. Les durées affichées dépendent de la machine ; les compteurs SQL et de hits Hibernate constituent la vérification fiable.
 
