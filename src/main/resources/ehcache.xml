@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.ehcache.org/v3"
+        xmlns:jsr107="http://www.ehcache.org/v3/jsr107">
+  <service><jsr107:defaults default-template="hibernate-cache"/></service>
+  <cache-template name="hibernate-cache">
+    <expiry><ttl unit="minutes">60</ttl></expiry>
+    <resources><heap unit="entries">1000</heap></resources>
+  </cache-template>
+  <cache alias="com.example.model.Auteur" uses-template="hibernate-cache"/>
+  <cache alias="com.example.model.Livre" uses-template="hibernate-cache"/>
+  <cache alias="com.example.model.Auteur.livres" uses-template="hibernate-cache"/>
+  <cache alias="default-query-results-region" uses-template="hibernate-cache"/>
+  <cache alias="default-update-timestamps-region" uses-template="hibernate-cache"/>
+</config>
